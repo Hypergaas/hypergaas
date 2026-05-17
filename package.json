@@ -19,10 +19,18 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "clean": "rm -rf dist"
   },
   "engines": {
     "node": ">=22"
   },
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.17.1",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
 }
