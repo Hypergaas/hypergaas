@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  // Compiles ONLY the codegen tool (the ts-morph extractor + CLI) to a scratch
+  // dir so `pnpm run codegen` can run it with plain `node` before the main
+  // `tsc` library build. This keeps option-A (codegen → tsc) working with zero
+  // extra runtime dependency (no tsx/ts-node) — the codegen tool is just
+  // compiled-then-run. See package.json `codegen` + `build` scripts and the
+  // v0.1 build-stack ADR § "Staging plan" (`pnpm run codegen` row).
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": ".codegen-dist",
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    // ts-morph's emitted types resolve fine; keep strictness from the base.
+    "types": ["node"]
+  },
+  "include": ["src/codegen/**/*"],
+  "exclude": ["node_modules", "dist", ".codegen-dist", "**/*.test.ts"]
+}

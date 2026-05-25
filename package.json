@@ -12,16 +12,20 @@
       "import": "./dist/index.js"
     }
   },
+  "bin": {
+    "gaasdk-extract": "./dist/codegen/cli.js"
+  },
   "files": [
     "dist",
     "README.md"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "pnpm run codegen && tsc -p tsconfig.json",
+    "codegen": "tsc -p tsconfig.codegen.json && node .codegen-dist/codegen/cli.js --tsconfig tsconfig.json --out gaasdk.actions.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist .codegen-dist gaasdk.actions.json"
   },
   "engines": {
     "node": ">=22"
@@ -30,6 +34,7 @@
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@types/node": "^22.10.0",
+    "ts-morph": "^28.0.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }
