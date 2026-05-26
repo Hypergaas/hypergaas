@@ -52,9 +52,11 @@
     "url": "https://github.com/Hypergaas/hypergaas/issues"
   },
   "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "ts-morph": "^28.0.0"
+  },
   "devDependencies": {
     "@types/node": "^22.10.0",
-    "ts-morph": "^28.0.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }
