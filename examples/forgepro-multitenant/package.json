@@ -1,0 +1,17 @@
+{
+  "name": "@hypergaas/example-forgepro-multitenant",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Worked example: two tenants, one process, scoped through a single HyperGaaS action registry. Illustrative consumer of the published package surface; the executable regression-tested copy lives in packages/hypergaas/src/__tests__.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "hypergaas": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2"
+  }
+}
