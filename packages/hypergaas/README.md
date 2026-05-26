@@ -1,6 +1,6 @@
 # hypergaas
 
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](../../LICENSE)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 
 **Add agents to your SaaS — without rewriting your service layer.**
 
@@ -85,4 +85,4 @@ ahead of `tsc` in this package's `build` script.
 
 ## License
 
-[Apache-2.0](../../LICENSE).
+[Apache-2.0](./LICENSE).

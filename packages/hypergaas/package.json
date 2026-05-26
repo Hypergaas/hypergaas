@@ -1,8 +1,17 @@
 {
   "name": "hypergaas",
   "version": "0.1.0",
-  "private": true,
-  "description": "An open-source agent SDK for B2B SaaS: typed, multi-tenant action registry over your existing service layer. Not yet published.",
+  "description": "An open-source agent SDK for B2B SaaS: a typed, multi-tenant action registry over your existing service layer.",
+  "keywords": [
+    "agents",
+    "ai",
+    "saas",
+    "multi-tenant",
+    "typescript",
+    "sdk",
+    "tool-calling",
+    "llm"
+  ],
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -33,6 +42,15 @@
     "node": ">=22"
   },
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hypergaas/hypergaas.git",
+    "directory": "packages/hypergaas"
+  },
+  "homepage": "https://github.com/Hypergaas/hypergaas#readme",
+  "bugs": {
+    "url": "https://github.com/Hypergaas/hypergaas/issues"
+  },
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@types/node": "^22.10.0",
