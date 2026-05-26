@@ -108,7 +108,7 @@ export class ActionRegistry {
       this.#schemaWarningEmitted = true;
       // eslint-disable-next-line no-console
       console.warn(
-        "[gaasdk] notify: no compiled schemas found; falling back to " +
+        "[hypergaas] notify: no compiled schemas found; falling back to " +
           "permissive Record<string, unknown> argument validation. " +
           "Ship ts-morph codegen before the v0.1 public surface commit. " +
           "(spec §3.b)",

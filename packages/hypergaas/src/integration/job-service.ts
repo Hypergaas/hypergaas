@@ -8,7 +8,7 @@
 // concession: TC39 stage-3 decorator factories must be bound to a specific
 // registry, and we don't have the public-surface `createActionRegistry(roles)`
 // binding step yet. The v0.1 public form lets developers write
-// `import { agentAction } from "gaasdk"` after a one-time `createActionRegistry`
+// `import { agentAction } from "hypergaas"` after a one-time `createActionRegistry`
 // call — same ergonomics, different import shape.
 
 import type { AgentContext } from "../runtime/context/types.js";

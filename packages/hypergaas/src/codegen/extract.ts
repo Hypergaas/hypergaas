@@ -11,7 +11,7 @@
 //
 // Walks the developer's source AST, finds `@agentAction(...)`-decorated
 // methods, derives the params (`P`) JSON schema from the method's second
-// parameter, and emits one artifact (`gaasdk.actions.json`) the runtime loads
+// parameter, and emits one artifact (`hypergaas.actions.json`) the runtime loads
 // at `createActionRegistry()` time. NO runtime reflection; NO running the
 // developer's code.
 //

@@ -1,4 +1,4 @@
-// Layer 4 — Schema codegen CLI (`gaasdk extract`).
+// Layer 4 — Schema codegen CLI (`hypergaas-extract`).
 //
 // Build-time entry point. Invoked by `pnpm run codegen`, which `pnpm run
 // build` runs BEFORE `tsc` (option A — codegen → tsc sequence, approved.jsonl
@@ -9,8 +9,8 @@
 // failure.
 //
 // Usage:
-//   gaasdk-extract [--tsconfig <path>] [--out <path>]
-// Defaults: --tsconfig ./tsconfig.json   --out ./gaasdk.actions.json
+//   hypergaas-extract [--tsconfig <path>] [--out <path>]
+// Defaults: --tsconfig ./tsconfig.json   --out ./hypergaas.actions.json
 
 import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -23,7 +23,7 @@ interface CliArgs {
 
 function parseArgs(argv: readonly string[]): CliArgs {
   let tsConfig = "tsconfig.json";
-  let out = "gaasdk.actions.json";
+  let out = "hypergaas.actions.json";
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (arg === "--tsconfig") {
@@ -50,18 +50,18 @@ export function runCli(argv: readonly string[]): number {
     writeFileSync(out, `${JSON.stringify(artifact, null, 2)}\n`, "utf8");
     // eslint-disable-next-line no-console
     console.log(
-      `[gaasdk] extracted ${artifact.actions.length} action(s) → ${out}`,
+      `[hypergaas] extracted ${artifact.actions.length} action(s) → ${out}`,
     );
     return 0;
   } catch (cause: unknown) {
     if (cause instanceof CodegenError) {
       // eslint-disable-next-line no-console
-      console.error(`[gaasdk] codegen failed: ${cause.message}`);
+      console.error(`[hypergaas] codegen failed: ${cause.message}`);
       return 1;
     }
     // eslint-disable-next-line no-console
     console.error(
-      `[gaasdk] codegen failed: ${
+      `[hypergaas] codegen failed: ${
         cause instanceof Error ? cause.message : String(cause)
       }`,
     );

@@ -1,41 +1,18 @@
 {
-  "name": "gaasdk",
+  "name": "hypergaas-monorepo",
   "version": "0.0.0",
   "private": true,
-  "description": "Internal scaffold for the GaaSDK agent SDK (working title — not final). Not yet published.",
+  "description": "HyperGaaS monorepo — the agent SDK for B2B SaaS, its docs/specs, the landing site, and worked examples. Workspace root; not published.",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "bin": {
-    "gaasdk-extract": "./dist/codegen/cli.js"
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "scripts": {
-    "build": "pnpm run codegen && tsc -p tsconfig.json",
-    "codegen": "tsc -p tsconfig.codegen.json && node .codegen-dist/codegen/cli.js --tsconfig tsconfig.json --out gaasdk.actions.json",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "clean": "rm -rf dist .codegen-dist gaasdk.actions.json"
-  },
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@10.17.1",
   "engines": {
     "node": ">=22"
   },
-  "license": "UNLICENSED",
-  "packageManager": "pnpm@10.17.1",
-  "devDependencies": {
-    "@types/node": "^22.10.0",
-    "ts-morph": "^28.0.0",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+  "scripts": {
+    "build": "pnpm --filter hypergaas run build",
+    "test": "pnpm --filter hypergaas run test",
+    "typecheck": "pnpm -r run typecheck",
+    "clean": "pnpm -r run clean"
   }
 }

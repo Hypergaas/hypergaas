@@ -1,4 +1,4 @@
-// gaasdk — v0.1 PUBLIC surface.
+// hypergaas — v0.1 PUBLIC surface.
 //
 // This is the first commit that publishes `@agentAction()`'s public type
 // signature (ship CHARTER § "v0.1 public API — locked inclusions"; batch item
@@ -70,9 +70,9 @@ export type {
 } from "./runtime/audit/types.js";
 
 // ── Schema codegen (build-time) ─────────────────────────────────────────────
-// The `gaasdk-extract` CLI (ts-morph) is the build-time entry; this re-exports
+// The `hypergaas-extract` CLI (ts-morph) is the build-time entry; this re-exports
 // the programmatic API + the strict-emitter error so build tooling can embed
-// it. Runtime schema validation consumes the emitted `gaasdk.actions.json`.
+// it. Runtime schema validation consumes the emitted `hypergaas.actions.json`.
 export {
   CodegenError,
   NON_LITERAL_AUDIENCE_MESSAGE,
