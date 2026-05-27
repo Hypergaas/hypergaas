@@ -10,8 +10,8 @@
     "node": ">=22"
   },
   "scripts": {
-    "build": "pnpm --filter hypergaas run build",
-    "test": "pnpm --filter hypergaas run test",
+    "build": "pnpm --filter @hypergaas/core run build",
+    "test": "pnpm --filter @hypergaas/core run test",
     "typecheck": "pnpm -r run typecheck",
     "clean": "pnpm -r run clean"
   }
