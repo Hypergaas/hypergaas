@@ -6,10 +6,10 @@
 // Structural shell only.
 // Code blocks pulled from the shipped v0.1 public surface (commit b7f5dda) and the
 // ForgePro anchor example — exact symbols, not illustrative pseudo-code.
-const STEP_INSTALL = `npm install hypergaas`;
+const STEP_INSTALL = `npm install @hypergaas/core`;
 
 const STEP_DECORATE = `// 1. Bind your roles to the registry once, at module scope.
-import { defineRoles, audience, createActionRegistry, type AgentContext } from "hypergaas";
+import { defineRoles, audience, createActionRegistry, type AgentContext } from "@hypergaas/core";
 
 const roles = defineRoles({
   owner: { displayName: "Owner", seniority: 4, canApproveIrreversibleUpTo: "high" },
@@ -35,7 +35,7 @@ class JobService {
   }
 }`;
 
-const STEP_INVOKE = `import { createAgentContext, isOk } from "hypergaas";
+const STEP_INVOKE = `import { createAgentContext, isOk } from "@hypergaas/core";
 
 // 3. Build one context per request. It is the only source of tenant identity —
 //    set it once at your request layer and never thread tenantId by hand again.

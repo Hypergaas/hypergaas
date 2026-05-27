@@ -25,8 +25,8 @@ import {
   type AgentContext,
   type RoleConfigMap,
 } from "../runtime/index.js";
-import { createStubDbClient } from "../integration/db-client.js";
-import { createJobService } from "../integration/job-service.js";
+import { createStubDbClient } from "../__examples__/db-client.js";
+import { createJobService } from "../__examples__/job-service.js";
 
 // Forge Pro role config — mirrors spec §7 / role-registry decision doc.
 const FORGE_PRO_ROLES: RoleConfigMap = {

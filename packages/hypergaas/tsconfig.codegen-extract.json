@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  // The SOURCE-WALK config the `hypergaas-extract` CLI (ts-morph) reads to find
+  // `@agentAction()`-decorated methods. It is deliberately SEPARATE from
+  // `tsconfig.json` (the dist-emit config): the worked examples that carry the
+  // `@agentAction()` decorations live under `src/__examples__/`, which the
+  // published build EXCLUDES (they must not ship in the tarball — they are
+  // demo/fixture code). The extractor still needs to SEE them to demonstrate
+  // that codegen produces the real action artifact, so the codegen step walks
+  // this examples-inclusive config while the library build (`tsc -p
+  // tsconfig.json`) emits only the public API into `dist/`. Tests are still
+  // excluded from the walk (they are not developer-authored services).
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "src/__tests__/**", "**/*.test.ts"]
+}

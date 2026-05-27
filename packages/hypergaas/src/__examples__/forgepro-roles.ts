@@ -7,7 +7,7 @@
 // role-key union that the registry-aware `@agentAction()` decorator narrows
 // `audienceRoles` against — a typo like `'dispather'` is a compile error.
 
-import { defineRoles, type RoleOf } from "./role-registry/index.js";
+import { defineRoles, type RoleOf } from "../integration/role-registry/index.js";
 
 /** Forge Pro (home-services SaaS) role registry — the anchor scenario. */
 export const ForgeProRoles = defineRoles({

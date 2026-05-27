@@ -16,19 +16,19 @@ export function DocsAndGithub() {
       </p>
 
       <div className="flex flex-wrap items-center gap-4">
-        {/* GitHub — org approved; repo flips public on a separate approval. */}
+        {/* GitHub — the repo is public. */}
         <a
-          href="https://github.com/hypergaas"
+          href="https://github.com/Hypergaas/hypergaas"
           className="inline-flex items-center gap-2 font-medium text-accent"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://img.shields.io/github/stars/hypergaas/hypergaas?style=social"
-            alt="GitHub stars for hypergaas/hypergaas"
+            src="https://img.shields.io/github/stars/Hypergaas/hypergaas?style=social"
+            alt="GitHub stars for Hypergaas/hypergaas"
             width={120}
             height={20}
           />
-          <span>github.com/hypergaas</span>
+          <span>github.com/Hypergaas/hypergaas</span>
         </a>
         {/* Docs — none published yet; "coming soon" is accurate at v0.1. */}
         <span className="font-medium text-neutral-400">Docs — coming soon</span>

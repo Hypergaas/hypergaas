@@ -46,11 +46,11 @@ export function Hero() {
           href="#quickstart"
           className="rounded-md bg-accent px-5 py-2.5 font-mono font-medium text-accent-fg"
         >
-          npm install hypergaas
+          npm install @hypergaas/core
         </a>
-        {/* Secondary CTA — GitHub (org approved; repo goes public post-approval). */}
+        {/* Secondary CTA — GitHub (repo is public). */}
         <a
-          href="https://github.com/hypergaas"
+          href="https://github.com/Hypergaas/hypergaas"
           className="rounded-md border border-neutral-300 px-5 py-2.5 font-medium"
         >
           Star on GitHub

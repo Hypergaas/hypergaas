@@ -13,11 +13,11 @@
 
 import type { AgentContext } from "../runtime/context/types.js";
 import type { AuditLogger } from "../runtime/audit/types.js";
-import { audience } from "./role-registry/index.js";
+import { audience } from "../integration/role-registry/index.js";
 import {
   createActionRegistry,
   type BoundActionRegistry,
-} from "./action-registry/index.js";
+} from "../integration/action-registry/index.js";
 import { ForgeProRoles, type ForgeProRole } from "./forgepro-roles.js";
 import type { Credit, DbClient, ScheduleEntry } from "./db-client.js";
 

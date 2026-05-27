@@ -23,12 +23,12 @@ import {
   type AudiencePredicate,
   type RoleOf,
 } from "../index.js";
-import { createStubDbClient } from "../integration/db-client.js";
+import { createStubDbClient } from "../__examples__/db-client.js";
 import {
   createForgeProJobService,
   ForgeProRoles,
   type ForgeProRole,
-} from "../integration/index.js";
+} from "../__examples__/index.js";
 
 const ANY_DATE = new Date("2026-05-25T09:00:00Z");
 

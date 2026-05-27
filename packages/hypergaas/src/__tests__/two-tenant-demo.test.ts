@@ -28,7 +28,7 @@ import {
   runTwoTenantPlan,
   type PlanStep,
   type ScheduleEntry,
-} from "../integration/index.js";
+} from "../__examples__/index.js";
 
 // Forge Pro role config — mirrors spec §7 / role-registry decision doc.
 const FORGE_PRO_ROLES: RoleConfigMap = {

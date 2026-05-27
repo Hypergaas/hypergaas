@@ -1,5 +1,5 @@
 {
-  "name": "hypergaas",
+  "name": "@hypergaas/core",
   "version": "0.1.0",
   "description": "An open-source agent SDK for B2B SaaS: a typed, multi-tenant action registry over your existing service layer.",
   "keywords": [
@@ -22,7 +22,10 @@
     }
   },
   "bin": {
-    "hypergaas-extract": "./dist/codegen/cli.js"
+    "hypergaas-extract": "dist/codegen/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist",
@@ -32,7 +35,7 @@
   ],
   "scripts": {
     "build": "pnpm run codegen && tsc -p tsconfig.json",
-    "codegen": "tsc -p tsconfig.codegen.json && node .codegen-dist/codegen/cli.js --tsconfig tsconfig.json --out hypergaas.actions.json",
+    "codegen": "tsc -p tsconfig.codegen.json && node .codegen-dist/codegen/cli.js --tsconfig tsconfig.codegen-extract.json --out hypergaas.actions.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

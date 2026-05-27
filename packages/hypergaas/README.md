@@ -15,14 +15,14 @@ actions for approval — one decorator, one place, no parallel schemas.
 ## Install
 
 ```bash
-npm install hypergaas
+npm install @hypergaas/core
 ```
 
 ## Quickstart
 
 ```typescript
 // 1. Bind your roles to the registry once, at module scope.
-import { defineRoles, audience, createActionRegistry, type AgentContext } from "hypergaas";
+import { defineRoles, audience, createActionRegistry, type AgentContext } from "@hypergaas/core";
 
 const roles = defineRoles({
   owner: { displayName: "Owner", seniority: 4, canApproveIrreversibleUpTo: "high" },
@@ -48,7 +48,7 @@ class JobService {
 ```
 
 ```typescript
-import { createAgentContext, isOk } from "hypergaas";
+import { createAgentContext, isOk } from "@hypergaas/core";
 
 // 3. Build one context per request — the only source of tenant identity.
 const ctx = createAgentContext({
